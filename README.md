@@ -15,7 +15,29 @@
 
 ## 🚀 طريقة التثبيت والبناء
 
-### 1. استنساخ المشروع
+### الطريقة الأسرع (من غير PC) — تحميل APK جاهز من GitHub Actions
+
+كل ما تـ push كود على branch `master` (أو تفتح PR) GitHub Actions هيبني الـ APK تلقائياً.
+
+1. افتح تبويب **Actions** في الريبو على GitHub.
+2. اختار آخر run ناجح من workflow **Build APK**.
+3. انزل تحت لقسم **Artifacts** وحمّل:
+   - `EagleGym-release-apk` (موصى به)
+   - `EagleGym-debug-apk` (للتجربة)
+4. فك ضغط الزيب اللي اتحمل، وثبّت ملف الـ APK على موبايلك (تحتاج تفعّل "السماح بالتثبيت من مصادر مجهولة").
+
+> لو عايز توقّع الـ release APK بـ keystore ثابت بدل الـ ad-hoc keystore اللي الـ workflow بينشئه كل مرة،
+> ضيف الـ secrets دي في **Settings → Secrets and variables → Actions** على الريبو:
+> - `KEYSTORE_BASE64` — محتوى الـ `.jks` بصيغة base64 (`base64 -w0 keystore.jks`)
+> - `KEYSTORE_PASSWORD`
+> - `KEY_ALIAS`
+> - `KEY_PASSWORD`
+
+لو دفعت tag بصيغة `v*` (مثل `v1.0.0`) الـ workflow هيعمل **GitHub Release** ويرفع الـ APKs فيها مباشرة.
+
+### الطريقة المحلية (لو عندك PC)
+
+#### 1. استنساخ المشروع
 
 ```bash
 git clone https://github.com/ahmedatteff2-sketch/EagleGym-Android.git
