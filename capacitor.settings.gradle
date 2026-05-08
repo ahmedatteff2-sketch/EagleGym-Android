@@ -1,0 +1,4 @@
+// Vendored from @capacitor/android v8.3.1 so this Android Studio project is self-contained
+// (no Node/npm install required to build).
+include ':capacitor-android'
+project(':capacitor-android').projectDir = new File('./capacitor-android/')

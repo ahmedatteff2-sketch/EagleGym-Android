@@ -1,12 +1,17 @@
 # Eagle Gym - Android App
 
-تطبيق Eagle Gym لنظام Android — تطبيق تتبع التمارين الرياضية.
+تطبيق Eagle Gym لنظام Android — Capacitor wrapper لتطبيق Eagle Gym الويب،
+بيحمّل الواجهة من السيرفر مباشرة بدون أي إعداد إضافي.
+
+> هذا الريبو متزامن مع مشروع Capacitor الموجود داخل
+> [`Eagles-Backend/client/android`](https://github.com/ahmedatteff2-sketch/Eagles-Backend/tree/main/client/android)
+> ومتسبَّتلَه `@capacitor/android` كـ Gradle module محلي عشان يبني standalone من غير Node/npm.
 
 ## 📋 المتطلبات
 
 - **Android Studio** (Koala أو أحدث)
 - **Android SDK** (يتم تحميله تلقائياً مع Android Studio)
-- **Java JDK** (يأتي مع Android Studio)
+- **Java JDK 21** (يأتي مع Android Studio Koala+)
 
 ## 🚀 طريقة التثبيت والبناء
 
@@ -22,7 +27,7 @@ cd EagleGym-Android
 1. افتح **Android Studio**
 2. اختر **Open**
 3. انتقل إلى مجلد المشروع
-4. انتظر **Gradle Sync** حتى يكتمل (أول مرة سيحمل dependencies)
+4. انتظر **Gradle Sync** حتى يكتمل (أول مرة سيحمل Gradle 8.14.3 + AndroidX dependencies)
 
 ### 3. بناء الـ APK
 
